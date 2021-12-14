@@ -2,6 +2,8 @@ package Model.Statement;
 
 import Model.ADT.IMyDict;
 import Model.Exception.MyException;
+import Model.Exception.StatementException.VarDeclStmtException;
+import Model.Exception.VarException;
 import Model.ProgramState.PrgState;
 import Model.Type.BoolType;
 import Model.Type.IType;
@@ -22,20 +24,22 @@ public class VarDeclStmt implements IStmt{
     }
 
 
+
+    @Override
+    public String toString() {
+        return type.toString() + " " + name;
+    }
+
     @Override
     public PrgState execute(PrgState state) throws MyException {
         IMyDict<String, IValue> dict = state.getSymTable();
 
         if (dict.isDefined(name))
-            throw new MyException("variable is already declared");
+            throw new VarException("variable is already declared");
 
-        if (Objects.equals(type, new BoolType()))
-            dict.addValue(name, new BoolValue(false));
-
-        else if (Objects.equals(type, new IntType()))
-            dict.addValue(name, new IntValue(0));
+        dict.add(name, type.defaultValue());
 
         return state;
-        
+
     }
 }

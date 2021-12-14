@@ -1,13 +1,13 @@
 package Model.ADT;
 
-import Model.Exception.MyDictException;
+import Model.Exception.ADTException.MyDictException;
+import Model.Value.IValue;
 
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Map;
+import java.util.*;
+
 
 public class MyDict<K, V> implements IMyDict<K, V> {
-    private Map<K, V> dict = new HashMap<K, V>();
+    protected Map<K, V> dict = new HashMap<K, V>();
 
 
     @Override
@@ -22,13 +22,50 @@ public class MyDict<K, V> implements IMyDict<K, V> {
     }
 
     @Override
-    public void addValue(K key, V value) {
+    public void add(K key, V value) throws MyDictException {
         dict.put(key, value);
     }
 
     @Override
     public boolean isDefined(K key) {
         return dict.containsKey(key);
+    }
+
+    @Override
+    public void removeKey(K key) throws MyDictException {
+        if (!dict.containsKey(key))
+            throw new MyDictException("key not stored");
+
+        dict.remove(key);
+    }
+
+    @Override
+    public String toString() {
+        String res = "";
+        for (Object key : dict.keySet().toArray()) {
+            res += key.toString() + "->" + dict.get(key).toString() + "\n";
+        }
+        return res;
+    }
+
+    @Override
+    public Collection<V> getValues() {
+        return this.dict.values();
+    }
+
+    @Override
+    public Set<Map.Entry<K, V>> entrySet() {
+        return dict.entrySet();
+    }
+
+    @Override
+    public Set<K> keySet() {
+        return dict.keySet();
+    }
+
+    @Override
+    public V get(K key) {
+        return dict.get(key);
     }
 
 

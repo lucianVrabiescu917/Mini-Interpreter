@@ -1,7 +1,8 @@
 package Model.Expression;
 
 import Model.ADT.IMyDict;
-import Model.Exception.MyDictException;
+import Model.Exception.ADTException.MyDictException;
+import Model.Exception.ExpressionException.VarExpException;
 import Model.Exception.MyException;
 import Model.Value.IValue;
 
@@ -12,13 +13,22 @@ public class VarExp implements IExp{
         this.id = id;
     }
 
+    public String toString() {
+        return id;
+    }
+
     @Override
-    public IValue eval(IMyDict<String, IValue> tbl) throws MyException {
+    public IExp deepCopy() {
+        return new VarExp(id);
+    }
+
+    @Override
+    public IValue eval(IMyDict<String, IValue> tbl, IMyDict<Integer, IValue> heap) throws MyException {
         try {
             IValue v = tbl.getValue(this.id);
             return v;
         } catch (MyDictException e) {
-            throw new MyException(e.getMessage());
+            throw new VarExpException(e.getMessage());
         }
     }
 }

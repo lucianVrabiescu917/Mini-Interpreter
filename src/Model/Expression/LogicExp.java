@@ -1,7 +1,9 @@
 package Model.Expression;
 
 import Model.ADT.IMyDict;
+import Model.Exception.ExpressionException.LogicExpException;
 import Model.Exception.MyException;
+import Model.Exception.TypeException;
 import Model.Type.BoolType;
 import Model.Value.BoolValue;
 import Model.Value.IValue;
@@ -9,7 +11,7 @@ import Model.Value.IValue;
 public class LogicExp implements IExp{
     IExp e1;
     IExp e2;
-    int op; //1-or 2-and
+    int op; //1-and(&&) 2-or(||)
 
     public LogicExp(IExp e1, IExp e2, int op) {
         this.e1 = e1;
@@ -17,14 +19,29 @@ public class LogicExp implements IExp{
         this.op = op;
     }
 
+    public String toString() {
+        switch (op) {
+            case 1:
+                return e1.toString() + "&&" + e2.toString();
+            case 2:
+                return e1.toString() + "||" + e2.toString();
+        }
+        return null;
+    }
 
     @Override
-    public IValue eval(IMyDict<String, IValue> tbl) throws MyException {
+    public IExp deepCopy() {
+        return new LogicExp(e1.deepCopy(), e2.deepCopy(), op);
+    }
+
+
+    @Override
+    public IValue eval(IMyDict<String, IValue> tbl, IMyDict<Integer, IValue> heap) throws MyException {
         IValue v1, v2;
-        v1 = (IValue) e1.eval(tbl);
+        v1 = e1.eval(tbl, heap);
         if (v1.getType().equals(new BoolType())) {
 
-            v2 = (IValue) e2.eval(tbl);
+            v2 = e2.eval(tbl, heap);
             if (v2.getType().equals(new BoolType())) {
 
                 switch (this.op) {
@@ -36,11 +53,11 @@ public class LogicExp implements IExp{
                         return new BoolValue(res2);
                 }
 
-            } else  throw new MyException("not a bool");
+            } else  throw new TypeException("not a bool");
 
-        } else  throw new MyException("not a bool");
+        } else  throw new TypeException("not a bool");
 
 
-        return null;
+        return v1;
     }
 }

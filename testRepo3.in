@@ -1,0 +1,2283 @@
+ExeStack:
+(Ref int v;(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+Ref Ref int a
+(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+new(a, v)
+(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+2->(2, Ref int)
+
+ExeStack:
+print(Model.Expression.RHeapExp@2eda0940)
+print(Model.Expression.RHeapExp@3578436e+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+2->(2, Ref int)
+
+ExeStack:
+print(Model.Expression.RHeapExp@3578436e+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+(1, int)
+FileTable:
+Heap:
+1->(1, int)
+2->(2, Ref int)
+
+ExeStack:
+(Ref int v;(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+Ref Ref int a
+(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+new(a, v)
+(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+2->(2, Ref int)
+
+ExeStack:
+print(Model.Expression.RHeapExp@2eda0940)
+print(Model.Expression.RHeapExp@3578436e+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+2->(2, Ref int)
+
+ExeStack:
+print(Model.Expression.RHeapExp@3578436e+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+(1, int)
+FileTable:
+Heap:
+1->(1, int)
+2->(2, Ref int)
+
+ExeStack:
+(Ref int v;(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+Ref Ref int a
+(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+new(a, v)
+(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+2->(2, Ref int)
+
+ExeStack:
+print(Model.Expression.RHeapExp@2eda0940)
+print(Model.Expression.RHeapExp@3578436e+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+2->(2, Ref int)
+
+ExeStack:
+print(Model.Expression.RHeapExp@3578436e+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+(1, int)
+FileTable:
+Heap:
+1->(1, int)
+2->(2, Ref int)
+
+ExeStack:
+(Ref int v;(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+Ref Ref int a
+(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+new(a, v)
+(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+2->(2, Ref int)
+
+ExeStack:
+print(Model.Expression.RHeapExp@2eda0940)
+print(Model.Expression.RHeapExp@3578436e+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+2->(2, Ref int)
+
+ExeStack:
+print(Model.Expression.RHeapExp@3578436e+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+(1, int)
+FileTable:
+Heap:
+1->(1, int)
+2->(2, Ref int)
+
+ExeStack:
+(Ref int v;(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+Ref Ref int a
+(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+new(a, v)
+(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+2->(2, Ref int)
+
+ExeStack:
+print(Model.Expression.RHeapExp@2eda0940)
+print(Model.Expression.RHeapExp@3578436e+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+2->(2, Ref int)
+
+ExeStack:
+print(Model.Expression.RHeapExp@3578436e+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+(1, int)
+FileTable:
+Heap:
+1->(1, int)
+2->(2, Ref int)
+
+ExeStack:
+(Ref int v;(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+Ref Ref int a
+(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+new(a, v)
+(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+
+ExeStack:
+(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+2->(2, Ref int)
+
+ExeStack:
+print(Model.Expression.RHeapExp@2eda0940)
+print(Model.Expression.RHeapExp@3578436e+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->(1, int)
+2->(2, Ref int)
+
+ExeStack:
+print(Model.Expression.RHeapExp@3578436e+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+(1, int)
+FileTable:
+Heap:
+1->(1, int)
+2->(2, Ref int)
+
+ExeStack:
+(Ref int v;(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(Ref Ref int a;(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+Ref Ref int a
+(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(new(a, v);(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5)))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+new(a, v)
+(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(print(Model.Expression.RHeapExp@2eda0940);print(Model.Expression.RHeapExp@3578436e+5))
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+print(Model.Expression.RHeapExp@2eda0940)
+print(Model.Expression.RHeapExp@3578436e+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+print(Model.Expression.RHeapExp@3578436e+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+20
+25
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+(Ref int v;(new(v, 20);(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5))))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5)))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5))))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+Ref Ref int a
+(new(a, v);(print(rH(v));print(rH(rH(a))+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(new(a, v);(print(rH(v));print(rH(rH(a))+5)))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+new(a, v)
+(print(rH(v));print(rH(rH(a))+5))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(print(rH(v));print(rH(rH(a))+5))
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+print(rH(v))
+print(rH(rH(a))+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+print(rH(rH(a))+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+20
+25
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+(Ref int v;(new(v, 20);(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5)))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+print(rH(v))
+(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+Model.Statement.WHeapStmt@2eda0940
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(Ref int v;(new(v, 20);(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5)))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+print(rH(v))
+(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+Model.Statement.WHeapStmt@2eda0940
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(Ref int v;(new(v, 20);(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5)))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+print(rH(v))
+(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+Model.Statement.WHeapStmt@2eda0940
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(Ref int v;(new(v, 20);(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5)))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(print(rH(v));(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+print(rH(v))
+(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(Model.Statement.WHeapStmt@2eda0940;print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+Model.Statement.WHeapStmt@2eda0940
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->30
+
+ExeStack:
+SymTable:
+v->(1, int)
+Out:
+20
+35
+FileTable:
+Heap:
+1->30
+
+ExeStack:
+(Ref int v;(new(v, 20);(print(rH(v));(wH(v30);print(rH(v)+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(print(rH(v));(wH(v30);print(rH(v)+5))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(print(rH(v));(wH(v30);print(rH(v)+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(print(rH(v));(wH(v30);print(rH(v)+5)))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(print(rH(v));(wH(v30);print(rH(v)+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+print(rH(v))
+(wH(v30);print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(wH(v30);print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+wH(v30)
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->30
+
+ExeStack:
+SymTable:
+v->(1, int)
+Out:
+20
+35
+FileTable:
+Heap:
+1->30
+
+ExeStack:
+(Ref int v;(new(v, 20);(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5))))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5)))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5)))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5))))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5))))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+Ref Ref int a
+(new(a, v);(print(rH(v));print(rH(rH(a))+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+Ref Ref int a
+(new(a, v);(print(rH(v));print(rH(rH(a))+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(new(a, v);(print(rH(v));print(rH(rH(a))+5)))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(new(a, v);(print(rH(v));print(rH(rH(a))+5)))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+new(a, v)
+(print(rH(v));print(rH(rH(a))+5))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+new(a, v)
+(print(rH(v));print(rH(rH(a))+5))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(print(rH(v));print(rH(rH(a))+5))
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+(print(rH(v));print(rH(rH(a))+5))
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+print(rH(v))
+print(rH(rH(a))+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+print(rH(v))
+print(rH(rH(a))+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+print(rH(rH(a))+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+print(rH(rH(a))+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+20
+25
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+20
+25
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+(Ref int v;(new(v, 20);(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5))))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5)))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5)))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5))))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(Ref Ref int a;(new(a, v);(print(rH(v));print(rH(rH(a))+5))))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+Ref Ref int a
+(new(a, v);(print(rH(v));print(rH(rH(a))+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+Ref Ref int a
+(new(a, v);(print(rH(v));print(rH(rH(a))+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(new(a, v);(print(rH(v));print(rH(rH(a))+5)))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(new(a, v);(print(rH(v));print(rH(rH(a))+5)))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+new(a, v)
+(print(rH(v));print(rH(rH(a))+5))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+new(a, v)
+(print(rH(v));print(rH(rH(a))+5))
+SymTable:
+a->(0, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(print(rH(v));print(rH(rH(a))+5))
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+(print(rH(v));print(rH(rH(a))+5))
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+print(rH(v))
+print(rH(rH(a))+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+print(rH(v))
+print(rH(rH(a))+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+print(rH(rH(a))+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+print(rH(rH(a))+5)
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+20
+25
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+SymTable:
+a->(2, Ref int)
+v->(1, int)
+Out:
+20
+25
+FileTable:
+Heap:
+1->20
+2->(1, int)
+
+ExeStack:
+(Ref int v;(new(v, 20);(print(rH(v));(wH(v, 30);print(rH(v)+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(print(rH(v));(wH(v, 30);print(rH(v)+5))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(print(rH(v));(wH(v, 30);print(rH(v)+5))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(print(rH(v));(wH(v, 30);print(rH(v)+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(print(rH(v));(wH(v, 30);print(rH(v)+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(print(rH(v));(wH(v, 30);print(rH(v)+5)))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(print(rH(v));(wH(v, 30);print(rH(v)+5)))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(print(rH(v));(wH(v, 30);print(rH(v)+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(print(rH(v));(wH(v, 30);print(rH(v)+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+print(rH(v))
+(wH(v, 30);print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+print(rH(v))
+(wH(v, 30);print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(wH(v, 30);print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(wH(v, 30);print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+wH(v, 30)
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+wH(v, 30)
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->30
+
+ExeStack:
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->30
+
+ExeStack:
+SymTable:
+v->(1, int)
+Out:
+20
+35
+FileTable:
+Heap:
+1->30
+
+ExeStack:
+SymTable:
+v->(1, int)
+Out:
+20
+35
+FileTable:
+Heap:
+1->30
+
+ExeStack:
+(Ref int v;(new(v, 20);(print(rH(v));(wH(v, 30);print(rH(v)+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(print(rH(v));(wH(v, 30);print(rH(v)+5))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(print(rH(v));(wH(v, 30);print(rH(v)+5))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(print(rH(v));(wH(v, 30);print(rH(v)+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(print(rH(v));(wH(v, 30);print(rH(v)+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(print(rH(v));(wH(v, 30);print(rH(v)+5)))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(print(rH(v));(wH(v, 30);print(rH(v)+5)))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(print(rH(v));(wH(v, 30);print(rH(v)+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(print(rH(v));(wH(v, 30);print(rH(v)+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+print(rH(v))
+(wH(v, 30);print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+print(rH(v))
+(wH(v, 30);print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(wH(v, 30);print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(wH(v, 30);print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+wH(v, 30)
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+wH(v, 30)
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+69420->30
+
+ExeStack:
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+SymTable:
+v->(1, int)
+Out:
+20
+25
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+SymTable:
+v->(1, int)
+Out:
+20
+25
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(Ref int v;(new(v, 20);(print(rH(v));(wH(v, 30);print(rH(v)+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(print(rH(v));(wH(v, 30);print(rH(v)+5))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(print(rH(v));(wH(v, 30);print(rH(v)+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(print(rH(v));(wH(v, 30);print(rH(v)+5)))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(print(rH(v));(wH(v, 30);print(rH(v)+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+print(rH(v))
+(wH(v, 30);print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(wH(v, 30);print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+wH(v, 30)
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+69420->30
+
+ExeStack:
+SymTable:
+v->(1, int)
+Out:
+20
+25
+FileTable:
+Heap:
+1->20
+69420->30
+
+ExeStack:
+(Ref int v;(new(v, 20);(print(rH(v));(wH(v, 30);print(rH(v)+5)))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+Ref int v
+(new(v, 20);(print(rH(v));(wH(v, 30);print(rH(v)+5))))
+SymTable:
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(new(v, 20);(print(rH(v));(wH(v, 30);print(rH(v)+5))))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+new(v, 20)
+(print(rH(v));(wH(v, 30);print(rH(v)+5)))
+SymTable:
+v->(0, int)
+Out:
+FileTable:
+Heap:
+
+ExeStack:
+(print(rH(v));(wH(v, 30);print(rH(v)+5)))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+print(rH(v))
+(wH(v, 30);print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+(wH(v, 30);print(rH(v)+5))
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+wH(v, 30)
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->20
+
+ExeStack:
+print(rH(v)+5)
+SymTable:
+v->(1, int)
+Out:
+20
+FileTable:
+Heap:
+1->30
+
+ExeStack:
+SymTable:
+v->(1, int)
+Out:
+20
+35
+FileTable:
+Heap:
+1->30
+

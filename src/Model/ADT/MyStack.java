@@ -1,6 +1,8 @@
 package Model.ADT;
 
+import Model.Exception.ADTException.MyStackException;
 import Model.Expression.IExp;
+import Model.Statement.IStmt;
 
 import java.util.Iterator;
 import java.util.Stack;
@@ -8,8 +10,16 @@ import java.util.Stack;
 public class MyStack<T> implements IMyStack<T>, Iterable<T> {
     private Stack<T> stack = new Stack<T>();
 
+    public MyStack (Stack<T> stk) {
+        stack = stk;
+    }
+
+    public MyStack () {}
+
     @Override
-    public T pop() {
+    public T pop() throws MyStackException {
+        if (stack.isEmpty())
+            throw new MyStackException("stack is empty");
         return stack.pop();
     }
 
@@ -22,6 +32,37 @@ public class MyStack<T> implements IMyStack<T>, Iterable<T> {
     public boolean isEmpty() {
         return stack.isEmpty();
     }
+
+    @Override
+    public int size() {
+        return stack.size();
+    }
+
+    @Override
+    public IMyStack<T> deepCopy() {
+        return new MyStack<T>((Stack<T>)stack.clone());
+    }
+
+    @Override
+    public String toString() {
+        String res = "";
+        Stack<T> cpy = (Stack<T>)stack.clone();
+        while (!cpy.isEmpty()) {
+            res += cpy.pop().toString() + "\n";
+        }
+        return res;
+    }
+
+    @Override
+    public T peek() {
+        return stack.peek();
+    }
+
+
+//    @Override
+//    public String toString() {
+//
+//    }
 
     @Override
     public Iterator<T> iterator() {
@@ -43,6 +84,8 @@ public class MyStack<T> implements IMyStack<T>, Iterable<T> {
             throw new UnsupportedOperationException("not supported yet");
         }
     }
+
+
 
 
 

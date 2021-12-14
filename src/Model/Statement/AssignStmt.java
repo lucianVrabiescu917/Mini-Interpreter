@@ -3,6 +3,9 @@ package Model.Statement;
 import Model.ADT.IMyDict;
 import Model.ADT.IMyStack;
 import Model.Exception.MyException;
+import Model.Exception.StatementException.AssignStmtException;
+import Model.Exception.TypeException;
+import Model.Exception.VarException;
 import Model.Expression.IExp;
 import Model.ProgramState.PrgState;
 import Model.Type.IType;
@@ -17,8 +20,9 @@ public class AssignStmt implements IStmt{
         this.exp = exp;
     }
 
-    public String toSting() {
-        return id+"="+ exp.toString();
+    @Override
+    public String toString() {
+        return id + "=" + exp.toString();
     }
 
     @Override
@@ -27,14 +31,14 @@ public class AssignStmt implements IStmt{
         IMyDict<String, IValue> symTbl = state.getSymTable();
 
         if (symTbl.isDefined(id)) {
-
-            IValue val = exp.eval(symTbl);
+            IValue val = exp.eval(symTbl, state.getHeap());
             IType typeId = symTbl.getValue(id).getType();
-            if (val.getType().equals(typeId))
-                symTbl.addValue(id, val);
-            else throw new MyException("declared type of variable"+id+" and type of the assigned expression do not match");
+            if (val.getType().equals(typeId)) {
+                symTbl.add(id, val);
+            }
+            else throw new TypeException("declared type of variable"+id+" and type of the assigned expression do not match");
 
-        } else throw new MyException(("the used variable" +id + " was not declared before"));
-        return null;
+        } else throw new VarException(("the used variable" +id + " was not declared before"));
+        return state;
     }
 }

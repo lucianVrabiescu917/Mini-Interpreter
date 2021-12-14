@@ -11,16 +11,25 @@ public class IntValue implements IValue{
         this.val = v;
     }
 
+    public IntValue() {
+        this.val = 0;
+    }
+
     public int getVal() {
         return val;
     }
 
-    public String valToString() {
+    public String toString() {
         return Integer.toString(val);
     }
 
     @Override
     public IType getType() {
         return new IntType();
+    }
+
+    @Override
+    public IValue deepCopy() {
+        return new IntValue(val);
     }
 }

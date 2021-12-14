@@ -10,9 +10,17 @@ public class ValueExp implements IExp{
     public ValueExp(IValue e) {
         this.e = e;
     }
+    public String toString() {
+        return e.toString();
+    }
 
     @Override
-    public IValue eval(IMyDict<String, IValue> tbl) throws MyException {
+    public IExp deepCopy() {
+        return new ValueExp(e.deepCopy());
+    }
+
+    @Override
+    public IValue eval(IMyDict<String, IValue> tbl, IMyDict<Integer, IValue> heap) throws MyException {
         return e;
     }
 }

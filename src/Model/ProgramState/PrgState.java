@@ -4,20 +4,44 @@ import Model.ADT.IMyDict;
 import Model.ADT.IMyList;
 import Model.ADT.IMyStack;
 import Model.ADT.MyStack;
+import Model.Exception.ADTException.MyStackException;
 import Model.Statement.IStmt;
 import Model.Value.IValue;
 
+import java.io.BufferedReader;
 import java.util.Stack;
 
 public class PrgState {
     IMyStack<IStmt> stk;
     IMyDict<String, IValue> symTable;
     IMyList<IValue> out;
+    IMyDict<String, BufferedReader> fileTable;
+    IMyDict<Integer, IValue> heap;
 
-    public PrgState(IMyStack<IStmt> stk, IMyDict<String, IValue> symTable, IMyList<IValue> out, IStmt prg) {
+    public PrgState(IMyStack<IStmt> stk, IMyDict<String, IValue> symTable, IMyList<IValue> out,
+                    IMyDict<String, BufferedReader> fileTable, IMyDict<Integer, IValue> heap ) {
         this.stk = stk;
         this.symTable = symTable;
         this.out = out;
+        this.fileTable = fileTable;
+        this.heap = heap;
+    }
+
+    public PrgState(IMyStack<IStmt> stk, IMyDict<String, IValue> symTable, IMyList<IValue> out,
+                    IMyDict<String, BufferedReader> fileTable, IMyDict<Integer, IValue> heap, IStmt prg ) {
+        this.stk = stk;
+        this.symTable = symTable;
+        this.out = out;
+        this.fileTable = fileTable;
+        this.heap = heap;
+        this.stk.push(prg);
+    }
+
+    public PrgState(IMyStack<IStmt> stk, IMyDict<String, IValue> symTable, IMyList<IValue> out, IMyDict<String, BufferedReader> fileTable, IStmt prg) {
+        this.stk = stk;
+        this.symTable = symTable;
+        this.out = out;
+        this.fileTable = fileTable;
         this.stk.push(prg);
     }
 
@@ -35,7 +59,6 @@ public class PrgState {
         this.out = out;
     }
 
-
     public IMyStack<IStmt> getStk() {
         return stk;
     }
@@ -48,17 +71,39 @@ public class PrgState {
         return out;
     }
 
-    public String toString() {
-        String stkS = "{";
-        IMyStack<IStmt> stk2 = new MyStack<IStmt>();
-        for (IStmt i : (MyStack<IStmt>)stk) {
-            stkS += i.toString() + ";";
-        }
-        stkS += "{";
+    public IMyDict<String, BufferedReader> getFileTable() {return fileTable;}
 
-        return stkS;
+    public IMyDict<Integer, IValue> getHeap() {return heap;}
+
+    public String toString() {
+
+        String res = "ExeStack:\n";
+        res += stk.toString();
+
+        res += "SymTable:\n";
+        res += symTable.toString();
+
+        res += "Out:\n";
+        res += out.toString();
+
+        res += "FileTable:\n";
+        res += fileTable.toString();
+
+
+        res += "Heap:\n";
+        res += heap.toString();
+
+        res += "\n";
+
+        return res;
+    }
+
+    public PrgState deepCopy() {
+        return new PrgState(stk, symTable, out, fileTable, heap);
     }
 
 
-
+    public void setHeap(IMyDict<Integer, IValue> heap) {
+        this.heap = heap;
+    }
 }

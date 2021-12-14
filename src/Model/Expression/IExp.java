@@ -5,5 +5,7 @@ import Model.Exception.MyException;
 import Model.Value.IValue;
 
 public interface IExp {
-    IValue eval(IMyDict<String,IValue> tbl) throws MyException;
+    String toString();
+    IExp deepCopy();
+    IValue eval(IMyDict<String, IValue> tbl, IMyDict<Integer, IValue> heap) throws MyException;
 }

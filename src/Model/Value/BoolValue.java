@@ -11,16 +11,25 @@ public class BoolValue implements IValue {
         this.val = v;
     }
 
+    public BoolValue() {
+        this.val = false;
+    }
+
     @Override
     public IType getType() {
         return new BoolType();
+    }
+
+    @Override
+    public IValue deepCopy() {
+        return new BoolValue(val);
     }
 
     public boolean getVal() {
         return val;
     }
 
-    String valToString() {
+    public String toString() {
         return Boolean.toString(val);
     }
 }

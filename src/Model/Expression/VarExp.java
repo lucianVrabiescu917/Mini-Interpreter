@@ -4,6 +4,7 @@ import Model.ADT.IMyDict;
 import Model.Exception.ADTException.MyDictException;
 import Model.Exception.ExpressionException.VarExpException;
 import Model.Exception.MyException;
+import Model.Type.IType;
 import Model.Value.IValue;
 
 public class VarExp implements IExp{
@@ -30,5 +31,10 @@ public class VarExp implements IExp{
         } catch (MyDictException e) {
             throw new VarExpException(e.getMessage());
         }
+    }
+
+    @Override
+    public IType typecheck(IMyDict<String, IType> typeEnv) throws MyException {
+        return typeEnv.getValue(id);
     }
 }

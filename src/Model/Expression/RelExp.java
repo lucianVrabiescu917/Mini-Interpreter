@@ -4,6 +4,7 @@ import Model.ADT.IMyDict;
 import Model.Exception.DivisionByZeroException;
 import Model.Exception.MyException;
 import Model.Exception.TypeException;
+import Model.Type.IType;
 import Model.Type.IntType;
 import Model.Value.BoolValue;
 import Model.Value.IValue;
@@ -72,5 +73,19 @@ public class RelExp implements IExp{
 
 
         return v1;
+    }
+
+    @Override
+    public IType typecheck(IMyDict<String, IType> typeEnv) throws MyException {
+        IType typ1, typ2;
+        typ1=e1.typecheck(typeEnv);
+        typ2=e2.typecheck(typeEnv);
+        if (typ1.equals(new IntType())) {
+            if (typ2.equals(new IntType())) {
+                return new IntType();
+            } else
+                throw new MyException("second operand is not an integer");
+        }else
+            throw new MyException("first operand is not an integer");
     }
 }

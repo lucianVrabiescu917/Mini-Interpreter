@@ -7,6 +7,7 @@ import Model.Expression.ValueExp;
 import Model.Expression.VarExp;
 import Model.ProgramState.PrgState;
 import Model.Statement.*;
+import Model.Type.IType;
 import Model.Type.IntType;
 import Model.Type.RefType;
 import Model.Value.IValue;
@@ -31,6 +32,12 @@ class NewStmtTest {
                                         new CompStmt(new NewStmt("a", new VarExp("v")),
                                                 new CompStmt(new PrintStmt(new VarExp("v")), new PrintStmt(new VarExp("a")))))));
 
+        try {
+            IMyDict<String, IType> typeEnv = new MyDict<String, IType>();
+            exp.typecheck(typeEnv);
+        } catch (MyException ex) {
+            System.out.println(ex.getMessage());
+        }
         IMyStack<IStmt> stk = new MyStack<IStmt>();
         IMyDict<String, IValue> sym = new MyDict<String, IValue>();
         IMyList<IValue> out = new MyList<IValue>();
@@ -42,7 +49,7 @@ class NewStmtTest {
 
         try {
             System.out.println(controller.allStep());
-        } catch (MyException | IOException ex) {
+        } catch (MyException | InterruptedException ex) {
             ex.printStackTrace();
         }
     }

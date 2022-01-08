@@ -1,5 +1,6 @@
 package Model.Statement;
 
+import Model.ADT.IMyDict;
 import Model.Exception.FileException;
 import Model.Exception.MyException;
 import Model.Exception.TypeException;
@@ -7,6 +8,7 @@ import Model.Exception.VarException;
 import Model.Expression.IExp;
 import Model.ProgramState.PrgState;
 import Model.Type.BoolType;
+import Model.Type.IType;
 import Model.Type.StringType;
 import Model.Value.IValue;
 
@@ -41,6 +43,15 @@ public class OpenRFileStmt implements IStmt {
             throw new FileException(ex.getMessage());
         }
 
-        return state;
+        return null;
+    }
+
+    @Override
+    public IMyDict<String, IType> typecheck(IMyDict<String, IType> typeEnv) throws MyException {
+        IType type = exp.typecheck(typeEnv);
+        if (type.equals(new StringType()))
+            return typeEnv;
+        else
+            throw new MyException("OpenRFile stmt: exp not a string");
     }
 }

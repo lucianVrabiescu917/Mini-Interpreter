@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.ADT.*;
+import Model.Exception.ADTException.MyListException;
 import Model.Exception.MyException;
 import Model.Expression.ValueExp;
 import Model.Expression.VarExp;
@@ -43,8 +44,8 @@ class GarbageCollectorTest {
         Controller controller = new Controller(repo);
 
         try {
-            System.out.println(controller.allStep());
-        } catch (MyException | IOException ex) {
+            controller.allStep();
+        } catch (InterruptedException | MyListException ex) {
             ex.printStackTrace();
         }
     }

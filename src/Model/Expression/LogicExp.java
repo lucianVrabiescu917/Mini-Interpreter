@@ -5,6 +5,8 @@ import Model.Exception.ExpressionException.LogicExpException;
 import Model.Exception.MyException;
 import Model.Exception.TypeException;
 import Model.Type.BoolType;
+import Model.Type.IType;
+import Model.Type.IntType;
 import Model.Value.BoolValue;
 import Model.Value.IValue;
 
@@ -59,5 +61,19 @@ public class LogicExp implements IExp{
 
 
         return v1;
+    }
+
+    @Override
+    public IType typecheck(IMyDict<String, IType> typeEnv) throws MyException {
+        IType t1, t2;
+        t1 = e1.typecheck(typeEnv);
+        t2 = e2.typecheck(typeEnv);
+        if (t1.equals(new BoolType())) {
+            if (t2.equals(new BoolType())) {
+                return new BoolType();
+            } else
+                throw new MyException("second operand is not a bool");
+        } else
+            throw new MyException("first operand is not a bool");
     }
 }

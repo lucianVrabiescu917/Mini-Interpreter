@@ -31,6 +31,12 @@ public class VarDeclStmt implements IStmt{
     }
 
     @Override
+    public IMyDict<String, IType> typecheck(IMyDict<String, IType> typeEnv) throws MyException {
+        typeEnv.add(name, type);
+        return typeEnv;
+    }
+
+    @Override
     public PrgState execute(PrgState state) throws MyException {
         IMyDict<String, IValue> dict = state.getSymTable();
 
@@ -39,7 +45,6 @@ public class VarDeclStmt implements IStmt{
 
         dict.add(name, type.defaultValue());
 
-        return state;
-
+        return null;
     }
 }

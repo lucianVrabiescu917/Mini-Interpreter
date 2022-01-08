@@ -41,7 +41,7 @@ class WHeapStmtTest {
 
         try {
             System.out.println(controller.allStep());
-        } catch (MyException | IOException ex) {
+        } catch (MyException | InterruptedException ex) {
             ex.printStackTrace();
         }
     }

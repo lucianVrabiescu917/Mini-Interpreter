@@ -7,6 +7,7 @@ import Model.Exception.TypeException;
 import Model.Exception.VarException;
 import Model.Expression.IExp;
 import Model.ProgramState.PrgState;
+import Model.Type.IType;
 import Model.Type.IntType;
 import Model.Type.RefType;
 import Model.Value.IValue;
@@ -26,6 +27,17 @@ public class NewStmt implements IStmt{
 
     public String toString() {
         return "new(" + var + ", " + exp.toString() + ")";
+    }
+
+    @Override
+    public IMyDict<String, IType> typecheck(IMyDict<String, IType> typeEnv) throws MyException {
+        IType typevar = typeEnv.getValue(var);
+        IType typexp = exp.typecheck(typeEnv);
+        if (typevar.equals(new RefType(typexp)))
+            return typeEnv;
+        else
+            throw new MyException("NEW stmt: right hand side and left hand side have "+
+                    "different types ");
     }
 
     @Override
@@ -57,7 +69,7 @@ public class NewStmt implements IStmt{
 
         dict.add(var, refVal);
 
-        return state;
+        return null;
 
 
     }

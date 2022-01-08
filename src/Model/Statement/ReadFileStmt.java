@@ -6,6 +6,7 @@ import Model.Exception.TypeException;
 import Model.Exception.VarException;
 import Model.Expression.IExp;
 import Model.ProgramState.PrgState;
+import Model.Type.IType;
 import Model.Type.IntType;
 import Model.Type.StringType;
 import Model.Value.IValue;
@@ -58,5 +59,16 @@ public class ReadFileStmt implements IStmt{
 
 
         return null;
+    }
+
+    @Override
+    public IMyDict<String, IType> typecheck(IMyDict<String, IType> typeEnv) throws MyException {
+        IType typevar = var.typecheck(typeEnv);
+        IType typexp = exp.typecheck(typeEnv);
+        if (!typevar.equals(new IntType()))
+            throw new MyException("Var not int type");
+        if (typexp.equals(new StringType()))
+            throw new MyException("Exp not string type");
+        return typeEnv;
     }
 }

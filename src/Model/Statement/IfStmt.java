@@ -1,11 +1,13 @@
 package Model.Statement;
 
+import Model.ADT.IMyDict;
 import Model.ADT.IMyStack;
 import Model.Exception.MyException;
 import Model.Exception.TypeException;
 import Model.Expression.IExp;
 import Model.ProgramState.PrgState;
 import Model.Type.BoolType;
+import Model.Type.IType;
 import Model.Value.BoolValue;
 import Model.Value.IValue;
 
@@ -27,6 +29,18 @@ public class IfStmt implements IStmt{
     public String toString(){
         return "(IF("+ exp.toString()+") THEN(" +thenS.toString()
             +")ELSE("+elseS.toString()+"))";}
+
+    @Override
+    public IMyDict<String, IType> typecheck(IMyDict<String, IType> typeEnv) throws MyException {
+        IType typexp = exp.typecheck(typeEnv);
+        if (typexp.equals(new BoolType())) {
+            thenS.typecheck(typeEnv.copy());
+            elseS.typecheck(typeEnv.copy());
+            return typeEnv;
+        }
+        else
+            throw new MyException("The condition of IF has not the type bool");
+    }
 
     @Override
     public PrgState execute(PrgState state) throws MyException, IOException {

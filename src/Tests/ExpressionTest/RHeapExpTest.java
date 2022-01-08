@@ -6,6 +6,7 @@ import Model.Exception.MyException;
 import Model.Expression.*;
 import Model.ProgramState.PrgState;
 import Model.Statement.*;
+import Model.Type.IType;
 import Model.Type.IntType;
 import Model.Type.RefType;
 import Model.Value.IValue;
@@ -29,8 +30,13 @@ class RHeapExpTest {
                             new CompStmt(new VarDeclStmt("a", new RefType(new RefType(new IntType()))),
                                 new CompStmt(new NewStmt("a", new VarExp("v")),
                                     new CompStmt(new PrintStmt(new RHeapExp(new VarExp("v"))),
-                                        new PrintStmt(new ArithExp(new RHeapExp(new RHeapExp(new VarExp("a"))), new ValueExp(new IntValue(5)), 1)))))));
-
+                                            new PrintStmt(new ArithExp(new RHeapExp(new RHeapExp(new VarExp("a"))), new ValueExp(new IntValue(5)), 1)))))));
+        IMyDict<String, IType> typenv = new MyDict<>();
+        try {
+            exp.typecheck(typenv);
+        } catch (MyException err) {
+            System.out.println(err);
+        }
         IMyStack<IStmt> stk = new MyStack<IStmt>();
         IMyDict<String, IValue> sym = new MyDict<String, IValue>();
         IMyList<IValue> out = new MyList<IValue>();
@@ -42,7 +48,7 @@ class RHeapExpTest {
 
         try {
             System.out.println(controller.allStep());
-        } catch (MyException | IOException ex) {
+        } catch (MyException | InterruptedException ex) {
             ex.printStackTrace();
         }
     }

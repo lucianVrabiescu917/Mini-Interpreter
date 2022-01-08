@@ -4,11 +4,17 @@ import Model.Exception.ADTException.MyDictException;
 import Model.Value.IValue;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 public class MyDict<K, V> implements IMyDict<K, V> {
     protected Map<K, V> dict = new HashMap<K, V>();
 
+    public MyDict(Map<K, V> dict) {
+        this.dict = dict;
+    }
+
+    public MyDict() {}
 
     @Override
     public V getValue(K key) throws MyDictException {
@@ -41,9 +47,11 @@ public class MyDict<K, V> implements IMyDict<K, V> {
 
     @Override
     public String toString() {
-        String res = "";
-        for (Object key : dict.keySet().toArray()) {
-            res += key.toString() + "->" + dict.get(key).toString() + "\n";
+        String res = " ";
+        if (!(dict.keySet().isEmpty())) {
+            for (Object key : dict.keySet().toArray()) {
+                res += key.toString() + "->" + dict.get(key).toString() + "\n";
+            }
         }
         return res;
     }
@@ -56,6 +64,13 @@ public class MyDict<K, V> implements IMyDict<K, V> {
     @Override
     public Set<Map.Entry<K, V>> entrySet() {
         return dict.entrySet();
+    }
+
+    @Override
+    public MyDict<K, V> copy() {
+        return new MyDict<K, V>(dict.entrySet().
+                stream().
+                collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue)));
     }
 
     @Override

@@ -18,7 +18,7 @@ public class RunExampleCommand extends Command {
         try{
             String res = ctr.allStep();
 //            System.out.println(res);
-        } catch (MyException | IOException ex) {
+        } catch (MyException | InterruptedException ex) {
             System.out.println(ex.getMessage());
         }
     }

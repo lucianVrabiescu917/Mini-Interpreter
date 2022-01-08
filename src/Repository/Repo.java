@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.File;
 
 public class Repo<T> implements IRepo<T>{
     private List<T> repo = new ArrayList<T>();
@@ -28,6 +29,8 @@ public class Repo<T> implements IRepo<T>{
         repo.add(prg);
         this.curr = 0;
         this.logFilePath = logFilePath;
+        File file = new File(logFilePath);
+        file.delete();
     }
 
     @Override
@@ -46,20 +49,35 @@ public class Repo<T> implements IRepo<T>{
     }
 
     @Override
-    public void logPrgStateExec() throws MyException, IOException {
+    public void logPrgStateExec(PrgState state) throws MyException, IOException {
         PrintWriter logFile = new PrintWriter(new BufferedWriter(new FileWriter(logFilePath, true)));
-        logFile.write(getCrtPrg().toString());
+        logFile.write(state.toString());
         logFile.close();
     }
 
     @Override
-    public void addByIndex(int i, T elem) throws RepositoryException {
-        if (i < 0 || i >= repo.size())
-            throw new RepositoryException("index out of bounds");
-
-        repo.add(i, elem);
+    public List<T> getPrgList() {
+        return repo;
     }
 
+    @Override
+    public void setPrgList(List<T> list) {
+        repo = list;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return repo.isEmpty();
+    }
+
+//    @Override
+//    public void addByIndex(int i, T elem) throws RepositoryException {
+//        if (i < 0 || i >= repo.size())
+//            throw new RepositoryException("index out of bounds");
+//
+//        repo.add(i, elem);
+//    }
+//
     @Override
     public T getByIndex(int i) throws MyListException {
         if (i < 0 || i >= repo.size())
@@ -67,21 +85,21 @@ public class Repo<T> implements IRepo<T>{
 
         return repo.get(i);
     }
-
-    @Override
-    public void removeByPos(int i) throws MyListException {
-        if (i < 0 || i >= repo.size())
-            throw new MyListException("index out of bounds");
-        repo.remove(i);
-    }
-
-    @Override
-    public void remove(T elem) throws MyListException {
-        if (!repo.contains(elem)) {
-            throw new MyListException("element not stored");
-        }
-        repo.remove(elem);
-    }
+//
+//    @Override
+//    public void removeByPos(int i) throws MyListException {
+//        if (i < 0 || i >= repo.size())
+//            throw new MyListException("index out of bounds");
+//        repo.remove(i);
+//    }
+//
+//    @Override
+//    public void remove(T elem) throws MyListException {
+//        if (!repo.contains(elem)) {
+//            throw new MyListException("element not stored");
+//        }
+//        repo.remove(elem);
+//    }
 
     @Override
     public IRepo<T> deepCopy() {

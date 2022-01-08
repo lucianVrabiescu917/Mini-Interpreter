@@ -1,11 +1,13 @@
 package Model.Statement;
 
+import Model.ADT.IMyDict;
 import Model.ADT.IMyStack;
 import Model.Exception.MyException;
 import Model.Exception.TypeException;
 import Model.Expression.IExp;
 import Model.ProgramState.PrgState;
 import Model.Type.BoolType;
+import Model.Type.IType;
 import Model.Value.BoolValue;
 import Model.Value.IValue;
 
@@ -20,6 +22,15 @@ public class WhileStmt implements IStmt{
 
     public String toString() {
         return "while(" + exp.toString() + ")";
+    }
+
+    @Override
+    public IMyDict<String, IType> typecheck(IMyDict<String, IType> typeEnv) throws MyException {
+        IType typexp = exp.typecheck(typeEnv);
+        if (typexp.equals(new BoolType())) {
+            return typeEnv;
+        } else
+            throw new MyException("The condition of WHILE has not the type bool");
     }
 
     @Override
@@ -38,6 +49,6 @@ public class WhileStmt implements IStmt{
             stk.pop();
         }
 
-        return state;
+        return null;
     }
 }

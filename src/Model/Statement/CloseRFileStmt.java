@@ -6,6 +6,7 @@ import Model.Exception.TypeException;
 import Model.Exception.VarException;
 import Model.Expression.IExp;
 import Model.ProgramState.PrgState;
+import Model.Type.IType;
 import Model.Type.StringType;
 import Model.Value.IValue;
 
@@ -36,6 +37,15 @@ public class CloseRFileStmt implements IStmt{
         BufferedReader br = ft.getValue(file.toString());
         br.close();
 
-        return state;
+        return null;
+    }
+
+    @Override
+    public IMyDict<String, IType> typecheck(IMyDict<String, IType> typeEnv) throws MyException {
+        IType type = exp.typecheck(typeEnv);
+        if (type.equals(new StringType()))
+            return typeEnv;
+        else
+            throw new MyException("OpenRFile stmt: exp not a string");
     }
 }

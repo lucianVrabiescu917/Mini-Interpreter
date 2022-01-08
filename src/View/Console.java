@@ -16,7 +16,7 @@ public class Console {
     public void inputProgram() throws MyException {
         try {
             System.out.println(controller.allStep());
-        } catch (MyException | IOException ex) {
+        } catch (MyException | InterruptedException ex) {
             System.out.println(ex.getMessage());
         }
     }

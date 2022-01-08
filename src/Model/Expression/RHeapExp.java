@@ -4,6 +4,7 @@ import Model.ADT.IMyDict;
 import Model.Exception.MyException;
 import Model.Exception.TypeException;
 import Model.Exception.VarException;
+import Model.Type.IType;
 import Model.Type.RefType;
 import Model.Value.IValue;
 import Model.Value.RefValue;
@@ -38,5 +39,15 @@ public class RHeapExp implements IExp{
             throw new VarException("address not stored");
 
         return heap.getValue(address);
+    }
+
+    @Override
+    public IType typecheck(IMyDict<String, IType> typeEnv) throws MyException {
+        IType typ = exp.typecheck(typeEnv);
+        if (typ instanceof RefType) {
+            RefType reft =(RefType) typ;
+            return reft.getInner();
+        } else
+            throw new MyException("the rH argument is not a Ref Type");
     }
 }

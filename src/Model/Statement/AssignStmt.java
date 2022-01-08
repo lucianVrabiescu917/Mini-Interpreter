@@ -26,6 +26,17 @@ public class AssignStmt implements IStmt{
     }
 
     @Override
+    public IMyDict<String, IType> typecheck(IMyDict<String, IType> typeEnv) throws MyException {
+        IType typevar = typeEnv.getValue(id);
+        IType typexp = exp.typecheck(typeEnv);
+        if (typevar.equals(typexp))
+            return typeEnv;
+        else
+            throw new MyException("Assignment: right hand side and left hand side" +
+                    "have different types ");
+    }
+
+    @Override
     public PrgState execute(PrgState state) throws MyException {
         IMyStack<IStmt> stk = state.getStk();
         IMyDict<String, IValue> symTbl = state.getSymTable();
@@ -39,6 +50,6 @@ public class AssignStmt implements IStmt{
             else throw new TypeException("declared type of variable"+id+" and type of the assigned expression do not match");
 
         } else throw new VarException(("the used variable" +id + " was not declared before"));
-        return state;
+        return null;
     }
 }

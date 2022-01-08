@@ -6,14 +6,15 @@ import Model.Exception.RepositoryException;
 import Model.ProgramState.PrgState;
 
 import java.io.IOException;
+import java.util.List;
 
 public interface IRepo<T> {
     T getCrtPrg();
     void add(T prg) throws MyException;
-    void logPrgStateExec() throws MyException, IOException;
-    void addByIndex(int index, T elem) throws RepositoryException;
-    T getByIndex(int index) throws MyListException;
-    void removeByPos(int index) throws MyListException;
-    void remove(T elem) throws MyListException;
+    void logPrgStateExec(PrgState state) throws MyException, IOException;
+    List<T> getPrgList();
+    void setPrgList(List<T> list);
+    boolean isEmpty();
+    public T getByIndex(int i) throws MyListException;
     IRepo<T> deepCopy();
 }
